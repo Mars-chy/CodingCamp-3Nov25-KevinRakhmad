@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar fade-in">
+      <div class="logo">
+      <img src="images/logo.png" alt="Company Logo"></div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#vision-mission">Our Profile</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#message">Message Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="images/banner.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="home-content">
+    <div class="text-box">
+      <h1 id="welcome-text">Hi There, Welcome To Website</h1>
+      <p>Ini adalah website latihan pertama</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Vision & Mission Section -->
+  <section id="vision-mission" class="vision-mission-section fade-in">
+    <h2>Our Vision & Mission</h2>
+    <div class="vm-container">
+      <div class="vision fade-in">
+        <h3>Our Vision</h3>
+        <p>
+          To become the most trusted and innovative company that delivers
+          excellent value to customers through technology and creativity.
+        </p>
+      </div>
+      <div class="mission fade-in">
+        <h3>Our Mission</h3>
+        <ul>
+          <li>Providing high-quality products and services with integrity.</li>
+          <li>Encouraging sustainable innovation and digital transformation.</li>
+          <li>Building long-term relationships with our clients and communities.</li>
+          <li>Empowering our team to grow with passion and excellence.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Headquarter Section -->
+  <section id="profile" class="headquarter-section fade-in">
+    <h2>Our Headquarter</h2>
+    <div class="circle-container">
+      <div class="circle fade-in">
+        <img src="images/jakarta.jpg" alt="Jakarta Office">
+        <div class="city">Jakarta</div>
+      </div>
+      <div class="circle fade-in">
+        <img src="images/bandung.png" alt="Bandung Office">
+        <div class="city">Bandung</div>
+      </div>
+      <div class="circle fade-in">
+        <img src="images/surabaya.png" alt="Surabaya Office">
+        <div class="city">Surabaya</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Message Us Section -->
+<section id="message" class="message-section fade-in">
+  <h2>Message Us</h2>
+  <div class="message-container">
+    <form id="contactForm" class="fade-in">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name..." required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="08xxxxxxxxxx" required>
+
+      <label for="messageText">Message</label>
+      <textarea id="messageText" name="messageText" placeholder="Your message..." required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="result" class="result-box fade-in">
+      <h3>Form Submission Result</h3>
+      <p>Waiting for your message...</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer>
+    <p>Created By Kevin RF</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

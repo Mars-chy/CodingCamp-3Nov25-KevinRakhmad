@@ -1,0 +1,372 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffdf5;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFD700;
+  padding: 10px 30px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 35px; 
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: white;
+}
+
+.home-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* ubah opacity kalau mau lebih terang */
+  z-index: -1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.text-box {
+  background: rgba(255, 255, 255, 0.15); 
+  padding: 30px 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px); 
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.home-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #FFD700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.home-section p {
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .home-section h1 {
+    font-size: 2rem;
+  }
+  .text-box {
+    padding: 20px;
+  }
+}
+
+
+.vision-mission-section h2 {
+  color: #222;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.vm-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.vision, .mission {
+  background: white;
+  border: 2px solid #FFD700;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 30px;
+  width: 350px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision:hover, .mission:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.vision h3, .mission h3 {
+  color: #FFD700;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.vision p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.mission ul {
+  list-style-type: "⭐ ";
+  color: #444;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.headquarter-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff9e6;
+}
+
+.headquarter-section h2 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.circle {
+  width: 130px;
+  height: 130px;
+  border: 3px solid #FFD700;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  overflow: hidden; 
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.circle:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.circle:hover {
+  background: #FFD700;
+  color: #222;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(255, 193, 7, 0.5);
+}
+
+.city {
+  position: absolute;
+  bottom: 5px;
+  background: rgba(255, 215, 0, 0.85);
+  color: #222;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+
+.message-section {
+  background-color: #fff8dc;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 4px solid #FFD700;
+}
+
+.message-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+form {
+  background: white;
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  color: #444;
+  font-weight: 600;
+  text-align: left;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 4px rgba(255, 215, 0, 0.5);
+}
+
+form button {
+  margin-top: 20px;
+  background-color: #FFD700;
+  border: none;
+  color: #222;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #f0c800;
+}
+
+.result-box {
+  background: white;
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  min-height: 400px;
+}
+
+
+
+
+footer {
+  background: linear-gradient(90deg, #FFD700, #FFC107);
+  color: #222;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .message-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .result-box, form {
+    width: 90%;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
